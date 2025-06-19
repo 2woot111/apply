@@ -126,25 +126,28 @@ export const Desktop = (): JSX.Element => {
                   onClick={handleApplyClick}
                   className="px-8 py-3 rounded-full text-lg font-medium transition-all duration-200 bg-black text-white hover:bg-black cursor-pointer"
                 >
-                  join us
+                  apply here
                 </Button>
               </div>
 
               {/* Terms checkbox and text */}
               <div className="flex items-start gap-2 text-xs text-gray-600 px-4 text-center">
-                <Checkbox
-                  id="terms-mobile"
-                  checked={isTermsAccepted}
-                  onCheckedChange={(checked) => setIsTermsAccepted(checked === true)}
-                  className="w-3 h-3 rounded border-gray-400 data-[state=checked]:bg-black data-[state=checked]:border-black mt-0.5 flex-shrink-0"
-                />
+                <div className="flex items-start">  
+                  <Checkbox
+                    id="terms-mobile"
+                    checked={isTermsAccepted}
+                    onCheckedChange={(checked) => setIsTermsAccepted(checked === true)}
+                    className="w-3 h-3 rounded border-gray-400 data-[state=checked]:bg-black data-[state=checked]:border-black flex-shrink-0"
+                    isMobile="true"
+                  />
+                </div>
                 <label htmlFor="terms-mobile" className="cursor-pointer leading-tight">
                   by applying you agree to our updated Terms of{" "}
-                  <a href="#" className="underline hover:no-underline">
+                  <a href="https://series.so/tou" target="_blank" className="underline hover:no-underline">
                     Use
                   </a>{" "}
                   and{" "}
-                  <a href="#" className="underline hover:no-underline">
+                  <a href="https://series.so/tos" target="_blank" className="underline hover:no-underline">
                     Service
                   </a>
                 </label>
@@ -171,19 +174,21 @@ export const Desktop = (): JSX.Element => {
 
               {/* Terms checkbox and text */}
               <div className="flex items-center gap-3 text-sm text-gray-600">
-                <Checkbox
-                  id="terms-desktop"
-                  checked={isTermsAccepted}
-                  onCheckedChange={(checked) => setIsTermsAccepted(checked === true)}
-                  className="w-4 h-4 rounded border-gray-400 data-[state=checked]:bg-black data-[state=checked]:border-black"
-                />
+                <div className="flex items-start">  
+                  <Checkbox
+                    id="terms-desktop"
+                    checked={isTermsAccepted}
+                    onCheckedChange={(checked) => setIsTermsAccepted(checked === true)}
+                    className="w-4 h-4 rounded border-gray-400 data-[state=checked]:bg-black data-[state=checked]:border-black"
+                  />
+                </div>
                 <label htmlFor="terms-desktop" className="cursor-pointer">
                   by applying you agree to our updated Terms of{" "}
-                  <a href="#" className="underline hover:no-underline">
+                  <a href="https://series.so/tou" target="_blank" className="underline hover:no-underline">
                     Use
                   </a>{" "}
                   and{" "}
-                  <a href="#" className="underline hover:no-underline">
+                  <a href="https://series.so/tos" target="_blank" className="underline hover:no-underline">
                     Service
                   </a>
                 </label>
